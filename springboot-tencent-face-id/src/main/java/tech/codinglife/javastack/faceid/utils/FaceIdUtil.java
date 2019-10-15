@@ -1,4 +1,4 @@
-package tech.codinglife.faceid.utils;
+package tech.codinglife.javastack.faceid.utils;
 
 import java.io.UnsupportedEncodingException;
 import java.math.BigInteger;

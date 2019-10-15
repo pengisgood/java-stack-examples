@@ -1,4 +1,4 @@
-package tech.codinglife.faceid;
+package tech.codinglife.javastack.faceid;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpEntity;
@@ -10,11 +10,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
-import tech.codinglife.faceid.model.AccessToken;
-import tech.codinglife.faceid.model.H5FaceId;
-import tech.codinglife.faceid.model.TicketResult;
-import tech.codinglife.faceid.model.TicketType;
-import tech.codinglife.faceid.utils.FaceIdUtil;
+import tech.codinglife.javastack.faceid.model.AccessToken;
+import tech.codinglife.javastack.faceid.model.H5FaceId;
+import tech.codinglife.javastack.faceid.model.TicketResult;
+import tech.codinglife.javastack.faceid.model.TicketType;
+import tech.codinglife.javastack.faceid.utils.FaceIdUtil;
 
 import java.util.HashMap;
 import java.util.Map;

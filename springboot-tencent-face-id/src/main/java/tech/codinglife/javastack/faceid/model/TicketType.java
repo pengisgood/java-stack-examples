@@ -1,4 +1,4 @@
-package tech.codinglife.faceid.model;
+package tech.codinglife.javastack.faceid.model;
 
 /**
  * Created by IntelliJ IDEA.
