@@ -1,0 +1,6 @@
+rootProject.name = 'java-stack-examples'
+
+include "java-basic"
+include "springboot-websocket"
+
+
