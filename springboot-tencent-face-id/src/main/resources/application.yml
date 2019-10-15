@@ -1,0 +1,18 @@
+server:
+    port: 8081
+
+spring:
+    thymeleaf:
+        cache: false
+        enabled: true
+        prefix: classpath:/templates/
+        suffix: .html
+
+    application:
+        name: Tencent Face Id
+
+tencent:
+    app:
+        id: <appId>
+        secret: <appSecret>
+        version: 1.0.0

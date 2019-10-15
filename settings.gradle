@@ -2,5 +2,6 @@ rootProject.name = 'java-stack-examples'
 
 include "java-basic"
 include "springboot-websocket"
+include "springboot-tencent-face-id"
 
 

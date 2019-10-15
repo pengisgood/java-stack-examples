@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Tencent Face Id Demo</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="../static/css/bootstrap.min.css" rel="stylesheet" th:href="@{/css/bootstrap.min.css}"/>
+</head>
+<body>
+
+<div class="container">
+  <div class="jumbotron">
+    <h1><span th:text="${appName}"/></h1>
+
+    <div class="accordion" id="accordionExample">
+      <div class="card">
+        <div class="card-header" id="headingOne">
+          <h2 class="mb-0">
+            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
+                    aria-expanded="true" aria-controls="collapseOne">
+              #1 Get Access Token
+            </button>
+          </h2>
+        </div>
+
+        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+          <div class="card-body">
+            <button class="btn btn-primary" onclick="getAccessToken()" type="button">Get access token</button>
+            <pre id="getAccessToken"></pre>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingTwo">
+          <h2 class="mb-0">
+            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo"
+                    aria-expanded="false" aria-controls="collapseTwo">
+              #2 Get Ticket
+            </button>
+          </h2>
+        </div>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+          <div class="card-body">
+            <button class="btn btn-primary" onclick="getTicket('SIGN')" type="button">Get SIGN ticket</button>
+            <button class="btn btn-primary" onclick="getTicket('NONCE')" type="button">Get NONCE ticket</button>
+            <pre id="getSignTicket"></pre>
+            <pre id="getNonceTicket"></pre>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingThree">
+          <h2 class="mb-0">
+            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree">
+              #3 Get Face Id
+            </button>
+          </h2>
+        </div>
+        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+          <div class="card-body">
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon-name">Name</span>
+              </div>
+              <input type="text" class="form-control" placeholder="姓名" name="name" value="">
+            </div>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon-idno">idNo</span>
+              </div>
+              <input type="text" class="form-control" placeholder="身份证号" name="idNo" value="">
+            </div>
+
+            <button class="btn btn-primary" onclick="getFaceId()" type="button">Get Face Id</button>
+            <pre id="getFaceId"></pre>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingFour">
+          <h2 class="mb-0">
+            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseFour">
+              #4 Login
+            </button>
+          </h2>
+        </div>
+
+        <div id="collapseFour" class="collapse" data-parent="#accordionExample">
+          <div class="card-body">
+            <button class="btn btn-primary" onclick="pcLogin()" type="button">PC端H5接入</button>
+            <button class="btn btn-primary" onclick="webLogin()" type="button">独立H5接入</button>
+            <div id="qrCode" style="margin: 20px auto"></div>
+            <pre id="login"></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script src="/js/jquery-3.4.1.min.js" th:href="@{/js/jquery-3.4.1.min.js}"></script>
+<script src="/js/bootstrap.min.js" th:href="@{/js/bootstrap.min.js}"></script>
+<script src="/js/qrcode.min.js" th:href="@{/js/qrcode.min.js}"></script>
+<script src="/js/faceid.js" th:href="@{/js/faceid.js}"></script>
+</body>
+</html>
